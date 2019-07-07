@@ -127,7 +127,6 @@ ensure_between = function(num, min_allowed, max_allowed) {
 }
 
 seed_cities = c(
-  "New York, USA",
   "Los Angeles, CA",
   "New York, NY"
 
