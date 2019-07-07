@@ -23,7 +23,7 @@ shinyServer(function(input, output, session) {
   })
   
   update_allowed_cities = observe({
-    if (isolate(input$go_button) == 0 & isolate(set_random_cities()) == 0 & map_name() == "world") return()
+    if (isolate(input$go_button) == 0 & isolate(set_random_cities()) == 0 & map_name() == "usa") return()
     
     updateSelectizeInput(session, "cities", choices=city_choices()$full.name)
   }, priority=500)
@@ -41,7 +41,7 @@ shinyServer(function(input, output, session) {
   }, priority=1000)
   
   set_cities_randomly = observe({
-    if (set_random_cities() == 0 & map_name() == "world") return()
+    if (set_random_cities() == 0 & map_name() == "usa") return()
     run_annealing_process$suspend()
     
     isolate({
@@ -71,7 +71,7 @@ shinyServer(function(input, output, session) {
   }, priority=50)
   
   set_dist_matrix_and_great_circles = observe({
-    if (input$go_button == 0 & set_random_cities() == 0 & map_name() == "world") return()
+    if (input$go_button == 0 & set_random_cities() == 0 & map_name() == "usa") return()
     
     isolate({
       if (nrow(vals$cities) < 2) return()
