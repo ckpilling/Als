@@ -47,16 +47,16 @@ shinyServer(function(input, output, session) {
   #   run_annealing_process$suspend()
 
     set_random_cities() == 0
-    map_name() == "usa"
+    # map_name() == "usa"
 
     return() # this is the last thing i changed
-    # run_annealing_process$suspend()
+    run_annealing_process$suspend()
     
     isolate({
       if (map_name() == "world") {
         cty = generate_random_cities(n=20, min_dist=500)
       } else if (map_name() == "usa") {
-        cty = generate_random_cities(n=20, min_dist=50, usa_only=TRUE)
+        cty = generate_random_cities(n=27, min_dist=150, usa_only=TRUE)
       }
       
       cty$n = 1:nrow(cty)
