@@ -28,9 +28,8 @@ shinyServer(function(input, output, session) {
     
     # input$go_button == 0
     # set_random_cities() == 0
-    map_name() == "usa"
-
-    return()
+    if (map_name() == "usa" & set_random_cities() == 0) return()
+    
     updateSelectizeInput(session, "cities", choices=city_choices()$full.name)
    }, priority=500)
   
