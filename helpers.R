@@ -8,7 +8,7 @@ generate_random_cities = function(n = 10, min_dist = 250, usa_only=TRUE) {
     candidates = usa_cities
   # } else {
   #  candidates = all_cities
-  }
+  # }
   
   cities = candidates[sample(nrow(candidates), 1),]
   candidates = subset(candidates, !(full.name %in% cities$full.name))
