@@ -15,13 +15,11 @@ shinyServer(function(input, output, session) {
   })
   
   city_choices = reactive({
-    # if (map_name() == "world") {
-    #   return(all_cities)
-    # } else if (map_name() == "usa") {
-    #   return(usa_cities)
-    # }
-
-    map_name() == "usa"
+    if (map_name() == "world") {
+      return(all_cities)
+    } else if (map_name() == "usa") {
+      return(usa_cities)
+    }
   })
   
   update_allowed_cities = observe({
