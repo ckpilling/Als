@@ -21,7 +21,7 @@ shinyServer(function(input, output, session) {
     #   return(usa_cities)
     # }
 
-    map_name() = "usa"
+    map_name() == "usa"
   })
   
   update_allowed_cities = observe({
