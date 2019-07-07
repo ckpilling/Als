@@ -40,9 +40,9 @@ shinyServer(function(input, output, session) {
     })
   }, priority=1000)
   
-  set_cities_randomly = observe({
-    if (set_random_cities() == 0 & map_name() == "usa") return()
-    run_annealing_process$suspend()
+  # set_cities_randomly = observe({
+  #   if (set_random_cities() == 0 & map_name() == "usa") return()
+  #   run_annealing_process$suspend()
     
     isolate({
       if (map_name() == "world") {
