@@ -57,7 +57,7 @@ shinyServer(function(input, output, session) {
       if (map_name() == "world") {
         cty = generate_random_cities(n=20, min_dist=500)
       } else if (map_name() == "usa") {
-        cty = generate_random_cities(n=15, min_dist=50, usa_only=TRUE)
+        cty = generate_random_cities(n=20, min_dist=50, usa_only=TRUE)
       }
       
       cty$n = 1:nrow(cty)
@@ -69,7 +69,7 @@ shinyServer(function(input, output, session) {
   
   set_cities_from_selected = observe({
     if (input$go_button == 0) return()
-    run_annealing_process$suspend()
+    # run_annealing_process$suspend()
     
     isolate({
       cty = subset(city_choices(), full.name %in% input$cities)
