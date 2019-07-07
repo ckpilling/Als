@@ -26,10 +26,7 @@ shinyServer(function(input, output, session) {
   update_allowed_cities = observe({
     # if (isolate(input$go_button) == 0 & isolate(set_random_cities()) == 0 & map_name() == "usa") return()
     
-    # input$go_button == 0
-    # set_random_cities() == 0
-    if (map_name() == "usa" & set_random_cities() == 0) return()
-    
+
     updateSelectizeInput(session, "cities", choices=city_choices()$full.name)
    }, priority=500)
   
@@ -53,7 +50,7 @@ shinyServer(function(input, output, session) {
     map_name() == "usa"
 
     return() # this is the last thing i changed
-    run_annealing_process$suspend()
+    # run_annealing_process$suspend()
     
     isolate({
       if (map_name() == "world") {
