@@ -14,7 +14,7 @@ generate_random_cities = function(n = 10, min_dist = 250, usa_only=TRUE) {
   candidates = subset(candidates, !(full.name %in% cities$full.name))
   i = 0
 
-  while (nrow(cities) < n & i < nrow(all_cities)) {
+  while (nrow(cities) < n & i < nrow(usa_cities)) {
     candidate = candidates[sample(nrow(candidates), 1),]
     candidate_dist_matrix = distm(rbind(cities, candidate)[, c("long", "lat")]) * miles_per_meter
 
