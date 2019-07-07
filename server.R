@@ -56,7 +56,8 @@ shinyServer(function(input, output, session) {
       
       vals$cities = cty
     })
-  }, priority=100)
+  # }, priority=100)
+  
   
   set_cities_from_selected = observe({
     if (input$go_button == 0) return()
@@ -189,4 +190,4 @@ shinyServer(function(input, output, session) {
     run_annealing_process$suspend()
     set_cities_randomly$suspend()
   })
-}
+})
