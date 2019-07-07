@@ -157,5 +157,7 @@ seed_cities = c(
   # "Istanbul, Turkey",
   # "London, UK",
   "New York, USA",
-  "Los Angeles, CA"
+  "Los Angeles, CA",
+  "Atlanta, GA"
+
 )
