@@ -38,7 +38,7 @@ shinyServer(function(input, output, session) {
       vals$distance_matrix = readRDS("data/distance_matrix.rds")
       vals$great_circles = readRDS("data/great_circles.rds")
     })
-  }, priority=1000)
+  }, priority=500)
   
   set_cities_randomly = observe({
     # if (set_random_cities() == 0 & map_name() == "usa") return()
