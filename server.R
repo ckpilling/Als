@@ -15,11 +15,13 @@ shinyServer(function(input, output, session) {
   })
   
   city_choices = reactive({
-    if (map_name() == "world") {
-      return(all_cities)
-    } else if (map_name() == "usa") {
-      return(usa_cities)
-    }
+    # if (map_name() == "world") {
+    #   return(all_cities)
+    # } else if (map_name() == "usa") {
+    #   return(usa_cities)
+    # }
+
+    map_name() = "usa"
   })
   
   update_allowed_cities = observe({
@@ -74,7 +76,7 @@ shinyServer(function(input, output, session) {
   }, priority=50)
   
   set_dist_matrix_and_great_circles = observe({
-   if (input$go_button == 0 & set_random_cities() == 0 & map_name() == "usa") return()
+   # if (input$go_button == 0 & set_random_cities() == 0 & map_name() == "usa") return()
     
     isolate({
       if (nrow(vals$cities) < 2) return()
