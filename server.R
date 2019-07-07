@@ -51,7 +51,7 @@ shinyServer(function(input, output, session) {
     set_random_cities() == 0
     map_name() == "usa"
 
-    run_annealing_process$suspend()
+    # run_annealing_process$suspend()
     
     isolate({
       if (map_name() == "world") {
