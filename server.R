@@ -23,9 +23,11 @@ shinyServer(function(input, output, session) {
   })
   
   update_allowed_cities = observe({
-    if (isolate(input$go_button) == 0 & isolate(set_random_cities()) == 0 & map_name() == "usa") return()
+    # if (isolate(input$go_button) == 0 & isolate(set_random_cities()) == 0 & map_name() == "usa") return()
     
-     updateSelectizeInput(session, "cities", choices=city_choices()$full.name)
+    map_name() == "usa"
+
+    updateSelectizeInput(session, "cities", choices=city_choices()$full.name)
    }, priority=500)
   
   one_time_initialization = observe({
