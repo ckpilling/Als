@@ -81,6 +81,10 @@ shinyServer(function(input, output, session) {
   
   set_dist_matrix_and_great_circles = observe({
    # if (input$go_button == 0 & set_random_cities() == 0 & map_name() == "usa") return()
+
+    input$go_button == 0
+    set_random_cities() == 0
+    map_name() == "usa"
     
     isolate({
       if (nrow(vals$cities) < 2) return()
