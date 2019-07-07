@@ -44,6 +44,9 @@ shinyServer(function(input, output, session) {
     # if (set_random_cities() == 0 & map_name() == "usa") return()
     # run_annealing_process$suspend()
 
+    map_name() == "usa"
+    return()
+
     isolate({
       if (map_name() == "world") {
         cty = generate_random_cities(n=20, min_dist=500)
