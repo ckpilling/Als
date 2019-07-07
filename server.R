@@ -45,7 +45,7 @@ shinyServer(function(input, output, session) {
     # run_annealing_process$suspend()
 
     map_name() == "usa"
-    return ()
+    # return ()
     run_annealing_process$suspend()
 
     isolate({
