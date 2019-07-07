@@ -33,7 +33,7 @@ generate_random_cities = function(n = 10, min_dist = 250, usa_only=TRUE) {
 }
 
 plot_base_map = function(map_name="usa") {
-  margins = c(3.5, 0, 3.5, 0)
+ #  margins = c(3.5, 0, 3.5, 0)
  #  if (map_name == "world") {
  #   map("world", col="#f3f3f3", fill=TRUE, lwd=0.2, mar=margins)
  # } else if (map_name == "usa") {
