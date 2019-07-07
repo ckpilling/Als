@@ -49,10 +49,10 @@ shinyServer(function(input, output, session) {
   #   if (set_random_cities() == 0 & map_name() == "usa") return()
   #   run_annealing_process$suspend()
 
-    set_random_cities() == 0
-    map_name() == "usa"
+    if (set_random_cities() == 0)
+      map_name() == "usa"
 
-    return()
+      return() # this is the last thing i changed
 
     run_annealing_process$suspend()
     
