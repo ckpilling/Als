@@ -14,13 +14,13 @@ shinyUI(fluidPage(
   plotOutput("map", height="550px"),
   
   fluidRow(
-    column(5,
-      tags$ol(
-        tags$li("Pick cities for Als' gigs"),
-        tags$li("Adjust parameters (optional)"),
-        tags$li("Click the 'Optimise Now!' button!")
-      )
-    ),
+    # column(5,
+    #   tags$ol(
+    #     tags$li("Pick cities for Als' gigs"),
+    #     tags$li("Adjust parameters (optional)"),
+    #     tags$li("")
+    #   )
+    # ),
     column(3,
       tags$button("Optimise Now!", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
     )
