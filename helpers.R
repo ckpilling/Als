@@ -40,7 +40,7 @@ plot_base_map = function(map_name="usa") {
     map_name=="usa" # me added
     map("usa", col="#f3f3f3", border=FALSE, fill=TRUE, mar=margins) #, projection="albers", parameters=c(29.5, 45.5))
     map("state", add=TRUE, col="#999999", fill=FALSE) #, projection="albers", parameters=c(29.5, 45.5))
-  }
+  # }
 }
 
 plot_city_map = function(cities, map_name="usa", label_cities=TRUE) {
