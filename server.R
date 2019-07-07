@@ -27,7 +27,7 @@ shinyServer(function(input, output, session) {
 
     if (isolate(input$go_button) == 0 & isolate(set_random_cities()) == 0)
     
-    map_name() == "usa" 
+      map_name() == "usa" 
     
     # return()
   
