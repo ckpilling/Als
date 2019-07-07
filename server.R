@@ -12,6 +12,8 @@ shinyServer(function(input, output, session) {
   
   set_random_cities = reactive({
     input$set_random_cities + input$set_random_cities_2
+
+    run_annealing_process$suspend()
   })
   
   city_choices = reactive({
@@ -51,7 +53,7 @@ shinyServer(function(input, output, session) {
     set_random_cities() == 0
     map_name() == "usa"
 
-    # run_annealing_process$suspend()
+    run_annealing_process$suspend()
     
     isolate({
       if (map_name() == "world") {
