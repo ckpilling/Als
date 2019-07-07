@@ -189,4 +189,4 @@ shinyServer(function(input, output, session) {
     run_annealing_process$suspend()
     set_cities_randomly$suspend()
   })
-})
+# })
