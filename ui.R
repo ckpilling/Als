@@ -31,10 +31,10 @@ shinyUI(fluidPage(
   fluidRow(
     column(5,
       p("Type the cities for Als' gigs, or", actionButton("set_random_cities", "auto pick cities", icon=icon("refresh"))),
-      selectizeInput("cities", NA, all_cities$full.name, multiple=TRUE, width="100%",
+      selectizeInput("cities", NA, usa_cities$full.name, multiple=TRUE, width="100%",
                      options = list(maxItems=30, maxOptions=100, placeholder="Start typing to select cities",
                                     selectOnTab=TRUE, openOnFocus=FALSE, hideSelected=TRUE)),
-      checkboxInput("label_cities", "Label cities on map?", FALSE)
+      checkboxInput("label_cities", "Label cities on map?", TRUE)
     ),
     
     column(2,
