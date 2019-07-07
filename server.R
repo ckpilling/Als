@@ -29,7 +29,7 @@ shinyServer(function(input, output, session) {
     
     map_name() == "usa" 
     
-    return()
+    # return()
   
     updateSelectizeInput(session, "cities", choices=city_choices()$full.name)
   }, priority=500)
