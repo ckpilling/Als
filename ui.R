@@ -14,6 +14,8 @@ shinyUI(fluidPage(
   plotOutput("map", height="550px"),
 
   hr(),
+
+  hr(),
   
   fluidRow(
     column(3,
