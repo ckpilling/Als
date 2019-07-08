@@ -43,6 +43,7 @@ shinyUI(fluidPage(
     
     column(5,
       plotOutput("annealing_schedule", height="260px"),
+      plotOutput("distance_results", height="260px")
     ),
     
     hr(),
@@ -51,7 +52,8 @@ shinyUI(fluidPage(
     
    fluidRow(
     column(3,  
-    textInput("map_name", NA, "USA", width="0px")
+    
+     textInput("map_name", NA, "USA", width="0px")
    )
   )
  )   
