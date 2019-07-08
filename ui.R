@@ -15,10 +15,6 @@ shinyUI(fluidPage(
 
   hr(),
 
-  hr(),
-
-  hr(),
-  
   fluidRow(
     column(3,
       tags$button("Optimise Now!", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
@@ -54,10 +50,10 @@ shinyUI(fluidPage(
     
     hr(),
     
-   fluidRow(
-    column(3,  
-     selectInput("map_name", NA, c("World", "USA"), "USA", width="0px")
-   )
+  #  fluidRow(
+  #   column(3,  
+  #    selectInput("map_name", NA, c("World", "USA"), "USA", width="0px")
+  #  )
   )
  )   
 ))
