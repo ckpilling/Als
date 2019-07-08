@@ -1,5 +1,4 @@
 library(shiny)
-# if (!exists("all_cities")) all_cities = readRDS("data/cities.rds")
 if (!exists("usa_cities")) usa_cities = readRDS("data/usa_cities.rds")
 
 shinyUI(fluidPage(
@@ -43,7 +42,6 @@ shinyUI(fluidPage(
     
     column(5,
       plotOutput("annealing_schedule", height="260px"),
-      plotOutput("distance_results", height="260px")
     ),
     
     hr(),
@@ -52,9 +50,7 @@ shinyUI(fluidPage(
     
    fluidRow(
     column(3,  
-     # selectInput("map_name", NA, c("World", "USA"), "USA", width="0px")
-
-     textInput("map_name", NA, "USA", width="0px")
+    textInput("map_name", NA, "USA", width="0px")
    )
   )
  )   
