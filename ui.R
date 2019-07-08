@@ -52,7 +52,7 @@ shinyUI(fluidPage(
     
    fluidRow(
     column(3,  
-     textInput("map_name", NA, "USA", width="0px")
+     textInput("map_name", NA, "USA", width="-10px")
    )
   )
  )   
