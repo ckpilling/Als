@@ -3,6 +3,6 @@
 #go_button, #set_random_cities_2 {
   width: 100%;
   margin-bottom: 10px;
-  color: red;
+  background-color: red;
 }
 hr { margin: 8px 0; }
