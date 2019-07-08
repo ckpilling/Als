@@ -50,10 +50,12 @@ shinyUI(fluidPage(
     
     hr(),
     
-  #  fluidRow(
-  #   column(3,  
-  #    selectInput("map_name", NA, c("World", "USA"), "USA", width="0px")
-  #  )
+   fluidRow(
+    column(3,  
+     # selectInput("map_name", NA, c("World", "USA"), "USA", width="0px")
+
+     Input("map_name", NA, USA", width="0px")
+   )
   )
  )   
 ))
