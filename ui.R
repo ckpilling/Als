@@ -12,15 +12,10 @@ shinyUI(fluidPage(
   tags$h2(tags$a(href="http://www.fujitsu.com", "Create a US tour for Als' and optimise it!", target="_blank")),
   
   plotOutput("map", height="550px"),
+
+  hr(),
   
   fluidRow(
-    # column(5,
-    #   tags$ol(
-    #     tags$li("Pick cities for Als' gigs"),
-    #     tags$li("Adjust parameters (optional)"),
-    #     tags$li("")
-    #   )
-    # ),
     column(3,
       tags$button("Optimise Now!", id="go_button", class="btn btn-info btn-large action-button shiny-bound-input")
     )
