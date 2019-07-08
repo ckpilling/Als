@@ -1,5 +1,5 @@
 library(shiny)
-# if (!exists("all_cities")) all_cities = readRDS("data/cities.rds")
+
 if (!exists("usa_cities")) usa_cities = readRDS("data/usa_cities.rds")
 
 shinyUI(fluidPage(
@@ -52,7 +52,6 @@ shinyUI(fluidPage(
     
    fluidRow(
     column(3,  
-    
      textInput("map_name", NA, "USA", width="0px")
    )
   )
