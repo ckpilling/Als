@@ -11,7 +11,7 @@ shinyUI(fluidPage(
   
   tags$h2(tags$a(href="http://www.fujitsu.com", "Create a US tour for Als' and optimise it!", target="_blank")),
   
-  plotOutput("map", height="550px"),
+  plotOutput("map", height="500px"),
 
   hr(),
 
