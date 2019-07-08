@@ -193,14 +193,9 @@ shinyServer(function(input, output, session) {
   output$distance_results = renderPlot({
     if (all(is.na(vals$distances))) return()
     
-  #   xvals = vals$plot_every_iterations * (1:vals$number_of_loops)
-  #   plot(xvals, vals$distances, type='o', pch=19, cex=0.7, 
-  #        ylim=c(0, max(vals$distances, na.rm=TRUE)), xlab="iterations", ylab="current tour distance",
-  #        main="Evolution of Current Tour Distance")
-  # }, height=260)
-  
   session$onSessionEnded(function() {
     run_annealing_process$suspend()
     set_cities_randomly$suspend()
+  })
   })
 })
