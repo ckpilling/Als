@@ -16,6 +16,8 @@ shinyUI(fluidPage(
   hr(),
 
   hr(),
+
+  hr(),
   
   fluidRow(
     column(3,
